@@ -4,7 +4,8 @@ set number
 map <C-n> :NERDTreeToggle<CR>
 
 set list
-set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
+"set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
+set listchars=tab:→\ ,space: ,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 
 set colorcolumn=80
 
