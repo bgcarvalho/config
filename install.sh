@@ -7,3 +7,5 @@
 # 2 - TMUX
 
 # 3 - TMUX CONF
+
+git clone https://github.com/tmux-plugins/tpm ~/config/tmux/plugins/tpm
