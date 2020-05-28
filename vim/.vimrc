@@ -5,7 +5,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 set list
 "set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
-set listchars=tab:→\ ,space: ,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
+set listchars=tab:→\ ,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 
 set colorcolumn=80
 
@@ -65,6 +65,11 @@ Plug 'preservim/nerdcommenter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dense-analysis/ale'
 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+Plug 'edkolev/tmuxline.vim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -82,3 +87,12 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 
 let NERDTreeShowHidden=1
+"let g:airline_theme='base16'
+"let g:airline_theme='wombat'
+"let g:airline_theme='cobalt2'
+"let g:airline_theme='dark'
+let g:airline_theme='simple'
+"let g:airline_theme='light'
+"let g:airline_theme='luna'
+"let g:airline_theme='molokai'
+"let g:airline_theme='base16'
