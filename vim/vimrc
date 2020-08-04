@@ -1,13 +1,17 @@
 " colorscheme 256_noir
-colorscheme cobalt0
+"colorscheme cobalt0
 set number
-map <C-n> :NERDTreeToggle<CR>
+set t_Co=256
+"map <C-n> :NERDTreeToggle<CR>
 
 set list
 "set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 set listchars=tab:→\ ,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
-
 set colorcolumn=80
+set lines=50 columns=100
+set tw=0
+set wrap linebreak
+set nowrap
 
 " Change highlighting of cursor line when entering/leaving Insert Mode
 set cursorline
@@ -22,77 +26,78 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" let ayucolor="dark"
+
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
+"let ayucolor="dark"   " for dark version of theme
+"colorscheme ayu
+"Plug 'ayu-theme/ayu-vim'
+
 " Make sure you use single quotes
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-Plug 'junegunn/vim-easy-align'
+"Plug 'junegunn/vim-easy-align'
 
 " Any valid git URL is allowed
-Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+"Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
 " Multiple Plug commands can be written in a single line using | separators
 "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " On-demand loading
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+"Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " Using a non-master branch
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
 " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
-Plug 'fatih/vim-go', { 'tag': '*' }
+"Plug 'fatih/vim-go', { 'tag': '*' }
 
 " Plugin options
-Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+"Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 
 " Cobalt2 color theme
 Plug 'gertjanreynaert/cobalt2-vim-theme'
 
+
+
 " fuzzy finder
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
 
-Plug 'itchyny/lightline.vim'
-Plug 'https://github.com/preservim/nerdtree.git'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'itchyny/lightline.vim'
+"Plug 'https://github.com/preservim/nerdtree.git'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
 
-Plug 'preservim/nerdcommenter'
+"Plug 'preservim/nerdcommenter'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'dense-analysis/ale'
+"Plug 'dense-analysis/ale'
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 
-Plug 'edkolev/tmuxline.vim'
+"Plug 'edkolev/tmuxline.vim'
 
 " Initialize plugin system
 call plug#end()
 
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ 'Ignored'   : '☒',
-    \ "Unknown"   : "?"
-    \ }
-
-let NERDTreeShowHidden=1
+"let NERDTreeShowHidden=1
 "let g:airline_theme='base16'
 "let g:airline_theme='wombat'
 "let g:airline_theme='cobalt2'
 "let g:airline_theme='dark'
-let g:airline_theme='simple'
+"let g:airline_theme='simple'
 "let g:airline_theme='light'
 "let g:airline_theme='luna'
 "let g:airline_theme='molokai'
 "let g:airline_theme='base16'
+set termguicolors
+"colorscheme cobalt0
+"colorscheme ayu
+"colorscheme morning
+colorscheme cobalt3
+

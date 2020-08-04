@@ -14,9 +14,18 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+#alias ll='ls -AlFh --color=auto --time-style=long-iso'
+#alias la='ls -a'
+#alias l='ls -CF'
 
 export EDITOR=vim
 
+if ls --color -d . >/dev/null 2>&1; then  # GNU ls
+  export COLUMNS  # Remember columns for subprocesses.
+  eval "$(dircolors)"
+  function ls {
+    command ls -F -h --color=always -v --author --time-style=long-iso -C "$@" | less -R -X -F
+  }
+  alias ll='ls -l'
+  alias l='ls -l -a'
+fi

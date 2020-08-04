@@ -1,8 +1,15 @@
+# autocompletation
+autoload -Uz compinit
+compinit
+
+# Completion for kitty
+kitty + complete setup zsh | source /dev/stdin
+
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:$HOME/local/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-#export ZSH="/home/bgcarvalho/.oh-my-zsh"
+export ZSH="/home/bgcarvalho/.oh-my-zsh"
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -12,8 +19,11 @@ export LC_ALL=en_US.UTF-8
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="fishy"
+#ZSH_THEME="fishy"
 #ZSH_THEME="cobalt"
+ZSH_THEME="muse"
+#ZSH_THEME="spaceship"
+#ZSH_THEME="cobalt2"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -86,11 +96,13 @@ prompt_dir() {
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  bundler
+  django
   dotenv
 )
 
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
+source ~/.oh-my-zsh/oh-my-zsh.sh
+#source ~/config/zsh/ohmyzsh/oh-my-zsh.sh
 
 # User configuration
 
@@ -102,6 +114,7 @@ source $ZSH/oh-my-zsh.sh
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
+#   export EDITOR='nvim'
 # else
 #   export EDITOR='mvim'
 # fi
@@ -118,8 +131,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#[ -f ~/config/fzf/fzf.zsh ] && source ~/config/fzf/fzf.zsh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -136,3 +149,17 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# TILIX VTE
+#if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+#     source /etc/profile.d/vte.sh
+#fi
+
+#if ls --color -d . >/dev/null 2>&1; then  # GNU ls
+#  export COLUMNS  # Remember columns for subprocesses.
+#  eval "$(dircolors)"
+#  function ls {
+#    command ls -F -h --color=always -v --author --time-style=long-iso -C "$@" | less -R -X -F
+#  }
+#  alias ll='ls -AlFh'
+#  alias l='ls -l -a'
+#fi
