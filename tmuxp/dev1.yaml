@@ -1,0 +1,101 @@
+session_name: mestrado
+windows:
+- window_name: main
+  focus: 'true'
+  layout: main-horizontal
+  options:
+    automatic-rename: 'off'
+    main-pane-height: 35
+  panes:
+  - shell_command:
+    - cd /home/bgcarvalho
+    - /usr/bin/glances -t 5
+  - shell_command:
+    - cd /home/bgcarvalho
+    - fish
+    focus: 'true'
+  - shell_command:
+    - cd /home/bgcarvalho
+    - fish
+- window_name: files
+  layout: tiled
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command:
+    - cd /home/bgcarvalho
+    - mc
+  - shell_command:
+    - cd /home/bgcarvalho
+    - /home/bgcarvalho/.local/bin/ranger
+  - shell_command:
+    - cd /home/bgcarvalho
+    - fish
+  - shell_command:
+    - cd /home/bgcarvalho
+    - fish
+- window_name: music
+  layout: tiled
+  options:
+    automatic-rename: 'off'
+  panes:
+  - shell_command:
+    - cd /home/bgcarvalho
+    - fish
+  - shell_command:
+    - cd /home/bgcarvalho
+    - fish
+  - focus: 'true'
+    shell_command:
+    - cd /home/bgcarvalho
+    - fish
+  - shell_command:
+    - cd /home/bgcarvalho
+    - fish
+- window_name: editor
+  layout: even-horizontal
+  start_directory: /home/bgcarvalho
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command:
+    - fish
+  - shell_command:
+    - fish
+- window_name: git
+  options:
+    automatic-rename: 'off'
+  panes:
+  - shell_command:
+    - fish
+  start_directory: /home/bgcarvalho
+- window_name: background-run
+  layout: even-vertical
+  options:
+    automatic-rename: 'off'
+  panes:
+  - shell_command:
+    - cd /home/bgcarvalho
+    - fish
+  - shell_command:
+    - cd /home/bgcarvalho
+    - fish
+  - shell_command:
+    - cd /home/bgcarvalho
+    - fish
+- window_name: remote-nested
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: fish
+  start_directory: /home/bgcarvalho
+- window_name: aux
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: fish
+  start_directory: /home/bgcarvalho/config
