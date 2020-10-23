@@ -25,10 +25,10 @@ But I am not a computer scientist, so things go slow.
 
 Premisses:
 
-    - Keep F-keys to your running programs (level 4)
-    - Keep triple combinations (Ctrl + Shift + <something>) to terminal emulator (level 3)
-    - Set prefix combinations to TMUX (Ctrl-B) (level 2)
-    - Ctrl + <key> for running programs.
+    - Keep F-keys and Ctrl + <key> for your running programs (level 4)
+    - Set prefix combinations to TMUX (Ctrl-B) (level 3)
+    - Keep triple combinations (Ctrl + Shift + <something>) to terminal emulator (level 2)
+    - Unset all desktop environment shortcuts.
 
 After a lot of time spent (and lost) in VIM, I decided to remap most frequent commands
 to well-known key combinations:
@@ -44,3 +44,5 @@ to well-known key combinations:
     - CTRL+y for redo
     - CTRL+f for find
     - CTRL+h for find and replace
+
+That's it. I keep learning and trying to optmize my processes.
