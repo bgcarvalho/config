@@ -1,4 +1,4 @@
-session_name: mestrado
+session_name: bgcarvalho
 windows:
 - window_name: main
   focus: 'true'
@@ -31,28 +31,23 @@ windows:
     - /home/bgcarvalho/.local/bin/ranger
   - shell_command:
     - cd /home/bgcarvalho
-    - fish
   - shell_command:
     - cd /home/bgcarvalho
-    - fish
 - window_name: music
   layout: tiled
   options:
     automatic-rename: 'off'
   panes:
   - shell_command:
-    - cd /home/bgcarvalho
     - fish
   - shell_command:
-    - cd /home/bgcarvalho
     - fish
   - focus: 'true'
     shell_command:
-    - cd /home/bgcarvalho
     - fish
   - shell_command:
-    - cd /home/bgcarvalho
     - fish
+  start_directory: /home/bgcarvalho
 - window_name: editor
   layout: even-horizontal
   start_directory: /home/bgcarvalho
@@ -77,14 +72,14 @@ windows:
     automatic-rename: 'off'
   panes:
   - shell_command:
-    - cd /home/bgcarvalho
-    - fish
+    - bash
+    - echo $SHELL
   - shell_command:
-    - cd /home/bgcarvalho
-    - fish
+    - echo $SHELL
   - shell_command:
-    - cd /home/bgcarvalho
     - fish
+    - echo $SHELL
+  start_directory: /home/bgcarvalho
 - window_name: remote-nested
   options:
     automatic-rename: 'off'
