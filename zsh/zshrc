@@ -98,6 +98,9 @@ plugins=(
   git
   django
   dotenv
+  zsh-autocomplete
+  zsh-syntax-highlighting
+  zsh-autosuggestions
 )
 
 #source $ZSH/oh-my-zsh.sh
