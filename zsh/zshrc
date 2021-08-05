@@ -1,18 +1,20 @@
 # autocompletation
-autoload -Uz compinit
-compinit
+#autoload -Uz compinit
+#compinit
 
 # Completion for kitty
-kitty + complete setup zsh | source /dev/stdin
+#kitty + complete setup zsh | source /dev/stdin
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/local/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/bgcarvalho/.oh-my-zsh"
+export ZSH="/home/bgcarvalho/config/zsh/oh-my-zsh"
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+
+#source ~/config/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -96,16 +98,15 @@ prompt_dir() {
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  django
-  dotenv
   zsh-autocomplete
-  zsh-syntax-highlighting
-  zsh-autosuggestions
 )
+# zsh-syntax-highlighting
+# zsh-autosuggestions
+# zsh-autocomplete
+# https://github.com/zsh-users/zsh-completions
 
-#source $ZSH/oh-my-zsh.sh
-source ~/.oh-my-zsh/oh-my-zsh.sh
-#source ~/config/zsh/ohmyzsh/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
+#source ~/config/zsh/oh-my-zsh/oh-my-zsh.sh
 
 # User configuration
 
@@ -135,7 +136,7 @@ source ~/.oh-my-zsh/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-#[ -f ~/config/fzf/fzf.zsh ] && source ~/config/fzf/fzf.zsh
+[ -f ~/config/fzf/fzf.zsh ] && source ~/config/fzf/fzf.zsh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -166,3 +167,17 @@ unset __conda_setup
 #  alias ll='ls -AlFh'
 #  alias l='ls -l -a'
 #fi
+
+# Config zsh-autocomplete
+# =================================================
+# To make Tab first insert any common substring, before inserting full completions:
+zstyle ':autocomplete:tab:*' insert-unambiguous yes
+
+# To make Tab or ShiftTab activate menu selection:
+#zstyle ':autocomplete:tab:*' widget-style menu-select
+
+# To make Tab and ShiftTab cycle completions without using menu selection:
+#zstyle ':autocomplete:tab:*' widget-style menu-complete
+
+# To start each new command line as if ControlR has been pressed:
+#zstyle ':autocomplete:*' default-context history-incremental-search-backward
