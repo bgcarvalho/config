@@ -44,7 +44,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
 Plug 'bling/vim-bufferline'
-"Plug 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Initialize plugin system
@@ -122,12 +122,14 @@ set breakindent
 set smartindent
 set nofoldenable
 set colorcolumn=88
-set foldmethod=syntax
+"set foldmethod=syntax
+set foldmethod=indent
 
+" BD = buffer delete => close file
 nnoremap <silent> <C-w> :bd<CR>
 nnoremap <silent> <leader><space> :Files<CR>
 inoremap <C-P> <C-o>:Files<CR>
-nnoremap <C-P> :Files<CR>
+"nnoremap <C-P> :Files<CR>
 inoremap <C-s> <C-o>:w<CR>
 map <C-s> :w<CR>
 "silent! nmap <C-n> :NERDTreeToggle<CR>
