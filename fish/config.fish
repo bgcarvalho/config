@@ -1,2 +1,5 @@
+set STARSHIP_CONFIG ~/config/starship/config.toml
 starship init fish | source
-export STARTSHIP_CONFIG=~/config/starship/config.toml
+
+# use kitty diff tool, works with files and dirs
+alias kd="kitty +kitten diff"
