@@ -8,15 +8,13 @@ windows:
     main-pane-height: 35
   panes:
   - shell_command:
-    - cd /home/bgcarvalho
-    - /usr/bin/glances -t 5
+    - /usr/bin/python3 -m glances -t 5
   - shell_command:
-    - cd /home/bgcarvalho
-    - fish
+    - date
     focus: 'true'
   - shell_command:
-    - cd /home/bgcarvalho
-    - fish
+    - echo $SHELL
+  start_directory: /home/bgcarvalho
 - window_name: files
   layout: tiled
   options:
@@ -24,29 +22,28 @@ windows:
   panes:
   - focus: 'true'
     shell_command:
-    - cd /home/bgcarvalho
     - mc
   - shell_command:
-    - cd /home/bgcarvalho
     - /home/bgcarvalho/.local/bin/ranger
   - shell_command:
-    - cd /home/bgcarvalho
+    - echo $SHELL
   - shell_command:
-    - cd /home/bgcarvalho
+    - echo $SHELL
+  start_directory: /home/bgcarvalho
 - window_name: music
   layout: tiled
   options:
     automatic-rename: 'off'
   panes:
   - shell_command:
-    - fish
+    - mocp
   - shell_command:
-    - fish
+    - cmus
   - focus: 'true'
     shell_command:
-    - fish
+    - echo $SHELL
   - shell_command:
-    - fish
+    - echo $SHELL
   start_directory: /home/bgcarvalho
 - window_name: editor
   layout: even-horizontal
@@ -56,15 +53,15 @@ windows:
   panes:
   - focus: 'true'
     shell_command:
-    - fish
+    - nvim
   - shell_command:
-    - fish
+    - nano
 - window_name: git
   options:
     automatic-rename: 'off'
   panes:
   - shell_command:
-    - fish
+    - echo $SHELL
   start_directory: /home/bgcarvalho
 - window_name: background-run
   layout: even-vertical
@@ -72,12 +69,10 @@ windows:
     automatic-rename: 'off'
   panes:
   - shell_command:
-    - bash
     - echo $SHELL
   - shell_command:
     - echo $SHELL
   - shell_command:
-    - fish
     - echo $SHELL
   start_directory: /home/bgcarvalho
 - window_name: remote-nested
@@ -85,12 +80,12 @@ windows:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-    shell_command: fish
+    shell_command: date
   start_directory: /home/bgcarvalho
 - window_name: aux
   options:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-    shell_command: fish
+    shell_command: echo $SHELL
   start_directory: /home/bgcarvalho/config
